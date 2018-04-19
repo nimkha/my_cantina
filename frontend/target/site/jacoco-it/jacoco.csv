@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+frontend,org.enterprise.exam.frontend.controller,DishController,0,30,0,0,0,10,0,7,0,7
+frontend,org.enterprise.exam.frontend.controller,MenuController,7,51,0,0,4,13,1,7,1,7
+frontend,org.enterprise.exam.frontend.controller,HomeController,4,52,2,4,0,15,2,8,0,7
+frontend,org.enterprise.exam,Application,6,3,0,0,2,1,1,1,1,1
+frontend,org.enterprise.exam.frontend,RedirectForwardHandler,2,3,0,0,1,1,1,1,1,1

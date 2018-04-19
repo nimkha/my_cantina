@@ -1,0 +1,6 @@
+org/enterprise/exam/backend/service/ServiceTestBase.class
+org/enterprise/exam/backend/service/ResetService.class
+org/enterprise/exam/backend/service/MenuServiceTest.class
+org/enterprise/exam/backend/service/DefaultDataInitializerServiceTest.class
+org/enterprise/exam/backend/StubApplication.class
+org/enterprise/exam/backend/service/DishServiceTest.class

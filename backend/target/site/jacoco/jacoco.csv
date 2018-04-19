@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+backend,org.enterprise.exam.backend.service,MenuService,9,152,2,14,2,38,2,11,0,5
+backend,org.enterprise.exam.backend.service,DefaultDataInitializerService,3,88,0,0,2,13,0,7,0,7
+backend,org.enterprise.exam.backend.service,DishService,2,33,2,2,0,9,2,3,0,3
+backend,org.enterprise.exam.backend.entity,Menu,11,18,0,0,5,7,3,4,3,4
+backend,org.enterprise.exam.backend.entity,Dish,10,14,0,0,4,7,3,4,3,4

@@ -1,0 +1,8 @@
+org/enterprise/exam/frontend/SeleniumDriverHandler.class
+org/enterprise/exam/frontend/MyCantinaTestBase.class
+org/enterprise/exam/frontend/MyCantinaIT.class
+org/enterprise/exam/LocalApplicationRunner.class
+org/enterprise/exam/frontend/page_object/DishesPageObject.class
+org/enterprise/exam/frontend/page_object/PageObject.class
+org/enterprise/exam/frontend/page_object/MenuPageObject.class
+org/enterprise/exam/frontend/page_object/HomePageObject.class

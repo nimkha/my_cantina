@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>MenuController.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">report</a> &gt; <a href="../index.html" class="el_bundle">frontend</a> &gt; <a href="index.source.html" class="el_package">org.enterprise.exam.frontend.controller</a> &gt; <span class="el_source">MenuController.java</span></div><h1>MenuController.java</h1><pre class="source lang-java linenums">package org.enterprise.exam.frontend.controller;
+
+import org.enterprise.exam.backend.service.MenuService;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+@Named
+@RequestScoped
+<span class="fc" id="L16">public class MenuController {</span>
+
+    private String dateForm;
+
+<span class="fc" id="L20">    private Map&lt;Long, Boolean&gt; checksForm = new HashMap&lt;&gt;();</span>
+
+    @Autowired
+    private MenuService menuService;
+
+    public String createMenu() {
+
+        try {
+<span class="fc" id="L28">            LocalDate date = LocalDate.parse(dateForm);</span>
+
+<span class="fc" id="L30">            List&lt;Long&gt; ids = checksForm.entrySet().stream()</span>
+<span class="fc" id="L31">                    .filter(e -&gt; e.getValue())</span>
+<span class="fc" id="L32">                    .map(e -&gt; e.getKey())</span>
+<span class="fc" id="L33">                    .collect(Collectors.toList());</span>
+
+<span class="fc" id="L35">            menuService.createMenu(date, ids);</span>
+
+<span class="fc" id="L37">            return &quot;/home.jsf&quot;;</span>
+<span class="nc" id="L38">        }catch (Exception e) {</span>
+<span class="nc" id="L39">            return &quot;/menu.jsf&quot;;</span>
+        }
+    }
+
+    public String getDateForm() {
+<span class="fc" id="L44">        return dateForm;</span>
+    }
+
+    public void setDateForm(String dateForm) {
+<span class="fc" id="L48">        this.dateForm = dateForm;</span>
+<span class="fc" id="L49">    }</span>
+
+    public Map&lt;Long, Boolean&gt; getChecksForm() {
+<span class="fc" id="L52">        return checksForm;</span>
+    }
+
+    public void setChecksForm(Map&lt;Long, Boolean&gt; checksForm) {
+<span class="nc" id="L56">        this.checksForm = checksForm;</span>
+<span class="nc" id="L57">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
